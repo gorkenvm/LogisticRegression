@@ -43,3 +43,5 @@ hatalar["hata_kareler"]=hatalar["hata"]**2
 hatalar["hata_kareler_ort"]=np.mean(hatalar["hata_kareler"])
 print(hatalar)
 
+
+
