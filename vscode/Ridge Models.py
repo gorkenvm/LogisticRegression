@@ -19,6 +19,8 @@ y=df["Salary"]
 X_=df.drop(['Salary', 'League', 'Division', 'NewLeague'], axis=1).astype('float64')
 X=pd.concat([X_, dms[['League_N', 'Division_W', 'NewLeague_N']]], axis=1)
 X_train, X_test, y_train, y_test = train_test_split(X,y,test_size=0.25,random_state=42)
+
+
 ridge_model= Ridge(alpha=0.1).fit(X_train, y_train)
 ridge_model.intercept_
 lambdalar=10**np.linspace(10,-2,100)*0.5
